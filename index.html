@@ -10,21 +10,28 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <header>
-            <div class="container">
-                <img src="css/logo.png" alt="logo" />
+        <div id="app">
+            <header>
+                <div class="container">
+                    <img src="css/logo.png" alt="logo" />
+                    <div class="filter">
+                        <select name="" id="">
+                            <option @click="optlog(index)" v-for="(genre,index) in genere" value=""> {{genre}} </option>
+                        </select>
+                    </div>
+                </div>
+            </header>
+    
+            <div  class="cds-container container">
+                <!-- Disco ad esempio -->
+                <div v-for="(cd,index) in cds" class="cd" v-if="opt == cd.genre || opt == 'all'">
+                    <img :src="cd.poster" alt="">
+                    <h3> {{cd.title}} </h3>
+                    <span class="author">{{cd.author}}</span>
+                    <span class="year">{{cd.year}}</span>
+                </div>
+    
             </div>
-        </header>
-
-        <div id="app" class="cds-container container">
-            <!-- Disco ad esempio -->
-            <div v-for="(cd,index) in cds" class="cd">
-                <img :src="cd.poster" alt="">
-                <h3> {{cd.title}} </h3>
-                <span class="author">{{cd.author}}</span>
-                <span class="year">{{cd.year}}</span>
-            </div>
-
         </div>
         
 
