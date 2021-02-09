@@ -17,10 +17,5 @@ var app = new Vue({
 					}
 				}
 			});
-	},
-	methods: {
-		sortbyopt(){
-			console.log(this.opt);
-		},
 	}
 });
