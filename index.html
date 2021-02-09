@@ -15,8 +15,8 @@
                 <div class="container">
                     <img src="css/logo.png" alt="logo" />
                     <div class="filter">
-                        <select name="" id="">
-                            <option @click="optlog(index)" v-for="(genre,index) in genere" value=""> {{genre}} </option>
+                        <select v-model="opt" name="" id="">
+                            <option  v-for="(genre,index) in genere" :value="genre"> {{genre}} </option>
                         </select>
                     </div>
                 </div>

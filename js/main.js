@@ -19,8 +19,8 @@ var app = new Vue({
 			});
 	},
 	methods: {
-		optlog(i){
-			this.opt = this.genere[i];
-		}
+		sortbyopt(){
+			console.log(this.opt);
+		},
 	}
 });
